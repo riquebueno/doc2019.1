@@ -4,7 +4,14 @@ Anotações da reunião 20/02/2019
 -- Qual dataset o artigo que faz join utiliza? Como esse dataset foi criado?
 -- Trazer exemplos de schemas e consultas dos schemas no WikiSQL? Eles querem ver se nossa ideia é muito naive...
 
-- Pauta
--- 
--- 
--- 
+- Ata
+
+-- Detalhei um pouco mais com o Plastino a ideia de geração artificial de queries com junção.
+--- Considerando que existe uma tabela chamada "pessoa" com as colunas "id" e "nome":
+---- Passo 1: criar automaticamente uma tabela "cidade" com as colunas "id" e "nome" + alterar a tabela "pessoa" para adicionar uma coluna "id_cidade" (Gerador de Tabelas).
+---- Passo 2: gerar automaticamente a query sql que exercita a nova coluna, por exemplo, "select cidade.nome from pessoa, cidade where pessoa.id_cidade=cidade.id and pessoa.nome in ('Joao', 'Maria')" (Gerador de SQL).
+---- Passo 3: gerar as consultas em português, por exemplo, "Quais as cidades do João e da Maria". Talvez uma pergunta que facilite o aprendizado do modelo seja "Quais os nomes das cidades das pessoas que tem o nome 'João' e 'Maria'" (Gerador de Perguntas).
+
+-- Para sofisticar posso pensar em uma relação N-N. Por exemplo, quais os projetos que uma pessoa trabalhou nem 2017?
+
+-- Próxima reunião 15/03 às 11h.
